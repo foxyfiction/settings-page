@@ -1,0 +1,50 @@
+<form class="form-horizontal" role="form">
+  <div class="form-group row">
+    <label for="emailNotificationInput" class="col-sm-3 control-label">Notification Email</label>
+    <div class="col-sm-9">
+      {{input type="text" value=changeset.notificationEmail class="form-control" id="emailNotificationInput" placeholder="user@example.com"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="proxyUrlInput" class="col-sm-3 control-label">Proxy Url</label>
+    <div class="col-sm-9">
+      {{input type="text" value=changeset.proxyUrl class="form-control" id="proxyUrlInput" placeholder="http://user:pass@123.456.789.012:54321"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="maxErrorCountInput" class="col-sm-3 control-label">Max error count</label>
+    <div class="col-sm-9">
+      {{input type="text" value=changeset.maxErrorCount class="form-control" id="maxErrorCountInput" placeholder="0"}}
+      <small class="">Number of errors before it suspends the listing.</small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="suspendScrapingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Scraping</label>
+    <div class="col-sm-9">
+      {{input type="checkbox" checked=changeset.suspendScraping class="form-check-input" id="suspendScrapingCheckbox"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="suspendParsingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Parsing</label>
+    <div class="col-sm-9">
+      {{input type="checkbox" checked=changeset.suspendParsing class="form-check-input" id="suspendParsingCheckbox"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="suspendUpdatingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Updating</label>
+    <div class="col-sm-9">
+      {{input type="checkbox" checked=changeset.suspendUpdating class="form-check-input" id="suspendUpdatingCheckbox"}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="submit" {{action save changeset}} class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</form>
