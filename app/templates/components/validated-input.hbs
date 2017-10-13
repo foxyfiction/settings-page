@@ -1,0 +1,18 @@
+<label class="col-sm-3 control-label" for={{concat propertyName 'Input'}}>{{label}}</label>
+<div class="col-sm-9">
+    {{input type="text"
+            value=(get changeset propertyName)
+            update=(action (mut (get changeset propertyName)))
+            class="form-control"
+            id=(concat propertyName 'Input')
+            placeholder=placeholder}}
+    {{#if form-text}}
+        <small class="">{{form-text}}</small><br>
+    {{/if}}
+    {{#if (get changeset.error propertyName)}}
+        {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
+            <small class="text-danger">{{error}}</small><br>
+        {{/each}}
+    {{/if}}
+
+</div>
