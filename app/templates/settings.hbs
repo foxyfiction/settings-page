@@ -1,3 +1,11 @@
+{{#if isResultMessageVisible}}
+    {{alert-message
+            title=resultMessageTitle
+            message=resultMessage
+            type=resultMessageType
+    }}
+{{/if}}
+
 <div class="panel panel-default">
   <div class="panel-body">
     {{setting-form changeset=(changeset model SettingValidations) save=(action 'save')}}
