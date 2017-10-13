@@ -1,0 +1,8 @@
+<label class="col-sm-3 form-check-label text-right" for={{concat propertyName 'Checkbox'}}>{{label}}</label>
+<div class="col-sm-9">
+    {{input type="checkbox"
+            checked=(get changeset propertyName)
+            update=(action (mut (get changeset propertyName)))
+            class="form-check-input"
+            id=(concat propertyName 'Checkbox')}}
+</div>

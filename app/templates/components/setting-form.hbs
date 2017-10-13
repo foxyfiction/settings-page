@@ -22,26 +22,23 @@
             form-text='Number of errors before it suspends the listing.'
     }}
 
-  <div class="form-group row">
-    <label for="suspendScrapingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Scraping</label>
-    <div class="col-sm-9">
-      {{input type="checkbox" checked=changeset.suspendScraping class="form-check-input" id="suspendScrapingCheckbox"}}
-    </div>
-  </div>
+    {{checkbox-input
+            label='Suspend Scraping'
+            propertyName='suspendScraping'
+            changeset=changeset
+    }}
 
-  <div class="form-group row">
-    <label for="suspendParsingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Parsing</label>
-    <div class="col-sm-9">
-      {{input type="checkbox" checked=changeset.suspendParsing class="form-check-input" id="suspendParsingCheckbox"}}
-    </div>
-  </div>
+    {{checkbox-input
+            label='Suspend Parsing'
+            propertyName='suspendParsing'
+            changeset=changeset
+    }}
 
-  <div class="form-group row">
-    <label for="suspendUpdatingCheckbox" class="col-sm-3 form-check-label text-right">Suspend Updating</label>
-    <div class="col-sm-9">
-      {{input type="checkbox" checked=changeset.suspendUpdating class="form-check-input" id="suspendUpdatingCheckbox"}}
-    </div>
-  </div>
+    {{checkbox-input
+            label='Suspend Updating'
+            propertyName='suspendUpdating'
+            changeset=changeset
+    }}
 
   <div class="row">
     <div class="col-sm-12">
